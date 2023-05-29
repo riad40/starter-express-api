@@ -13,6 +13,5 @@ prescriptionRouter.get("/count", getPrescriptionsCount);
 prescriptionRouter.get("/count/week", getPrescriptionsCountCurrentWeek);
 prescriptionRouter.get("/count/month", getPrescriptionsCountCurrentMonth);
 prescriptionRouter.get("/:id", getPrescription);
-prescriptionRouter.post("/",  uploadImage_1.default.single("avatar"),
-, createPrescription);
+prescriptionRouter.post("/",  uploadImage_1.default.single("avatar"), createPrescription);
 exports.default = prescriptionRouter;
