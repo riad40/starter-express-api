@@ -8,6 +8,7 @@ class PrescriptionSchema extends mongoose_1.Schema {
                 type: String,
                 required: true,
             },
+            avatar: { type: String },
             products: [
                 {
                     name: {
@@ -24,7 +25,10 @@ class PrescriptionSchema extends mongoose_1.Schema {
                     },
                 },
             ],
-        });
+        }, {
+            timestamps: true,
+        }
+             );
     }
 }
 const Prescription = (0, mongoose_1.model)("Prescription", new PrescriptionSchema());
