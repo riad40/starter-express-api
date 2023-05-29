@@ -55,12 +55,16 @@ class PrescriptionsController {
      * @access  Public
      */
     createPrescription(req, res) {
+        var _a;
         return __awaiter(this, void 0, void 0, function* () {
             const { patient, products } = req.body;
+                        const avatar = req.file && `/images/${(_a = req.file) === null || _a === void 0 ? void 0 : _a.filename}`;
+
             try {
                 const prescription = yield Prescription_1.default.create({
                     patient,
                     products,
+                    avatar
                 });
                 return res.status(201).json(prescription);
             }
