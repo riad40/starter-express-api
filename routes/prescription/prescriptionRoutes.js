@@ -13,6 +13,6 @@ prescriptionRouter.get("/count", getPrescriptionsCount);
 prescriptionRouter.get("/count/week", getPrescriptionsCountCurrentWeek);
 prescriptionRouter.get("/count/month", getPrescriptionsCountCurrentMonth);
 prescriptionRouter.get("/:id", getPrescription);
-prescriptionRouter.post("/", const uploadImage_1 = __importDefault(require("../../middlewares/uploadImage"));
+prescriptionRouter.post("/",  uploadImage_1.default.single("avatar"),
 , createPrescription);
 exports.default = prescriptionRouter;
