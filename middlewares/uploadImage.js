@@ -10,7 +10,7 @@ const path_1 = __importDefault(require("path"))
 const today_1 = __importDefault(require("../helpers/today"))
 const storeImage = multer_1.default.diskStorage({
     destination: (req, file, cb) => {
-        cb(null, "/tmp/images")
+        cb(null, "tmp/images")
     },
     filename: (req, file, cb) => {
         cb(
